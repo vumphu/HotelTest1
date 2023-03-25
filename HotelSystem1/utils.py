@@ -104,15 +104,15 @@ def invalid_salary(salary):
         except ValueError:
             return 1
 
-def invalid_price(price, style):
+def invalid_price(price, type):
     while True:
         try:
             price_check = float(price)
-            if price_check == 1000000 and style == "Normal":
+            if price_check == 1000000 and type == "Normal":
                 return 0
-            elif price_check == 2000000 and style == "Gold":
+            elif price_check == 2000000 and type == "Gold":
                 return 0
-            elif price_check == 3000000 and style == "Luxury":
+            elif price_check == 3000000 and type == "Luxury":
                 return 0
             else: return 1
         except ValueError:
